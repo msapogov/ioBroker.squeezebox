@@ -277,6 +277,16 @@ function completePlayer(device) {
         role: 'switch'
     });
     createStateObject({
+        name: channelName + '.muted',
+        read: true,
+        write: true,
+        type: 'boolean',
+        role: 'media.mute',
+        min:    false,
+        max:    true,
+        desc:   'Is muted'
+    });
+    createStateObject({
         name: channelName + '.next',
         read: false,
         write: true,

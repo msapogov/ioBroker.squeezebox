@@ -277,6 +277,20 @@ function completePlayer(device) {
         role: 'switch'
     });
     createStateObject({
+        name: channelName + '.next',
+        read: true,
+        write: false,
+        type: 'button',
+        role: 'text'
+    });
+    createStateObject({
+        name: channelName + '.prev',
+        read: true,
+        write: false,
+        type: 'button',
+        role: 'text'
+    });
+    createStateObject({
         name: channelName + '.currentTitle',
         read: true,
         write: false,
@@ -332,6 +346,7 @@ function completePlayer(device) {
         type: 'string',
         role: 'text'
     });
+    
     
     // request all information we need
     device.player.runTelnetCmd('mixer muting ?');

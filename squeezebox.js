@@ -291,6 +291,27 @@ function completePlayer(device) {
         role: 'text'
     });
     createStateObject({
+        name: channelName + '.stop',
+        read: true,
+        write: false,
+        type: 'button',
+        role: 'text'
+    });
+    createStateObject({
+        name: channelName + '.play',
+        read: true,
+        write: false,
+        type: 'button',
+        role: 'text'
+    });
+    createStateObject({
+        name: channelName + '.pause',
+        read: true,
+        write: false,
+        type: 'button',
+        role: 'text'
+    });
+    createStateObject({
         name: channelName + '.currentTitle',
         read: true,
         write: false,

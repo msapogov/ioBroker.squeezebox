@@ -252,6 +252,15 @@ function completePlayer(device) {
         role: 'switch'
     });
     createStateObject({
+        name: channelName + '.state_simple',    // media.state -   Text state of player: stop, play, pause (read, write)
+        def:    false,
+        type:   'boolean',
+        read:   true,
+        write:  true,
+        role:   'media.state',
+        desc:   'Play or pause'
+    });
+    createStateObject({
         name: channelName + '.state',
         read: true,
         write: true,
@@ -382,8 +391,16 @@ function completePlayer(device) {
         type: 'string',
         role: 'text'
     });
-    
-    
+    createStateObject({
+        name: channelName + '.tts',
+        def:    '',
+        type:   'string',
+        read:   false,
+        write:  true,
+        role:   'media.tts',
+        desc:   'Set text2speech mp3 file to play'
+     });
+        
     // request all information we need
     device.player.runTelnetCmd('mixer muting ?');
     device.player.runTelnetCmd("current_title ?");

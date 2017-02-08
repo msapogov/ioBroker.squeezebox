@@ -278,38 +278,43 @@ function completePlayer(device) {
     });
     createStateObject({
         name: channelName + '.next',
-        read: true,
-        write: false,
-        type: 'button',
-        role: 'text'
+        read: false,
+        write: true,
+        type: 'boolean',
+        role: 'button.next',
+        desc: 'next'
     });
     createStateObject({
         name: channelName + '.prev',
-        read: true,
-        write: false,
-        type: 'button',
-        role: 'text'
+        read: false,
+        write: true,
+        type: 'boolean',
+        role: 'button.prev',
+        desc: 'prev'
     });
     createStateObject({
         name: channelName + '.stop',
-        read: true,
-        write: false,
-        type: 'button',
-        role: 'text'
+        read: false,
+        write: true,
+        type: 'boolean',
+        role: 'button.stop',
+        desc: 'stop'
     });
     createStateObject({
         name: channelName + '.play',
-        read: true,
-        write: false,
-        type: 'button',
-        role: 'text'
+        read: false,
+        write: true,
+        type: 'boolean',
+        role: 'button.play',
+        desc: 'play'
     });
     createStateObject({
         name: channelName + '.pause',
-        read: true,
-        write: false,
-        type: 'button',
-        role: 'text'
+        read: false,
+        write: true,
+        type: 'boolean',
+        role: 'button.pause',
+        desc: 'pause'
     });
     createStateObject({
         name: channelName + '.currentTitle',
